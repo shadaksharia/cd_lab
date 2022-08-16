@@ -10,7 +10,7 @@ extern FILE* yyin;
 %%
 S : I
 
-I : FOR '(' INIT ';' CND ';' ASS ')' LOOP { number++;}
+I : FOR '(' INIT ';' CND ';' ASSGN ')' LOOP { number++;}
 ;
 LOOP : '{' I '}'
 	| '{' '}' 
@@ -21,7 +21,7 @@ INIT : INT NAME '=' NUM
 CND : NAME '<' NUM
 |
 ;
-ASS :
+ASSGN :
 ;
 %%
 int main(){
